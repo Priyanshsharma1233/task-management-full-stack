@@ -1,0 +1,588 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes:
+    light-default,
+    light-blue,
+    light-purple,
+    light-red,
+    light-orange,
+    dark-default,
+    dark-blue,
+    dark-purple,
+    dark-red,
+    dark-orange;
+}
+
+/* =====================================================
+   LIGHT DEFAULT
+   Neutral / original application theme
+===================================================== */
+
+@plugin "daisyui/theme" {
+  name: "light-default";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: oklch(100% 0 0);
+  --color-base-200: oklch(97% 0 0);
+  --color-base-300: oklch(92% 0 0);
+  --color-base-content: oklch(25% 0 0);
+
+  --color-primary: oklch(45% 0 0);
+  --color-primary-content: oklch(98% 0 0);
+
+  --color-secondary: oklch(60% 0 0);
+  --color-secondary-content: oklch(98% 0 0);
+
+  --color-accent: oklch(55% 0 0);
+  --color-accent-content: oklch(98% 0 0);
+
+  --color-neutral: oklch(30% 0 0);
+  --color-neutral-content: oklch(98% 0 0);
+
+  --color-info: oklch(70% 0.15 240);
+  --color-info-content: oklch(98% 0.01 240);
+
+  --color-success: oklch(70% 0.17 160);
+  --color-success-content: oklch(98% 0.01 160);
+
+  --color-warning: oklch(80% 0.18 85);
+  --color-warning-content: oklch(25% 0.04 85);
+
+  --color-error: oklch(65% 0.22 25);
+  --color-error-content: oklch(98% 0.01 25);
+
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+/* =====================================================
+   LIGHT BLUE
+===================================================== */
+
+@plugin "daisyui/theme" {
+  name: "light-blue";
+  default: false;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: oklch(100% 0 0);
+  --color-base-200: oklch(97% 0.014 240);
+  --color-base-300: oklch(92% 0.028 240);
+  --color-base-content: oklch(25% 0.04 240);
+
+  --color-primary: oklch(60% 0.22 255);
+  --color-primary-content: oklch(98% 0.01 255);
+
+  --color-secondary: oklch(70% 0.18 285);
+  --color-secondary-content: oklch(98% 0.01 285);
+
+  --color-accent: oklch(65% 0.18 210);
+  --color-accent-content: oklch(98% 0.01 210);
+
+  --color-neutral: oklch(30% 0.04 240);
+  --color-neutral-content: oklch(98% 0.01 240);
+
+  --color-info: oklch(70% 0.18 240);
+  --color-info-content: oklch(98% 0.01 240);
+
+  --color-success: oklch(70% 0.17 160);
+  --color-success-content: oklch(98% 0.01 160);
+
+  --color-warning: oklch(80% 0.18 85);
+  --color-warning-content: oklch(25% 0.04 85);
+
+  --color-error: oklch(65% 0.22 25);
+  --color-error-content: oklch(98% 0.01 25);
+
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+/* =====================================================
+   LIGHT PURPLE
+===================================================== */
+
+@plugin "daisyui/theme" {
+  name: "light-purple";
+  default: false;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: oklch(100% 0 0);
+  --color-base-200: oklch(97% 0.015 300);
+  --color-base-300: oklch(92% 0.03 300);
+  --color-base-content: oklch(25% 0.04 300);
+
+  --color-primary: oklch(60% 0.22 295);
+  --color-primary-content: oklch(98% 0.01 295);
+
+  --color-secondary: oklch(70% 0.18 325);
+  --color-secondary-content: oklch(98% 0.01 325);
+
+  --color-accent: oklch(65% 0.18 270);
+  --color-accent-content: oklch(98% 0.01 270);
+
+  --color-neutral: oklch(30% 0.04 300);
+  --color-neutral-content: oklch(98% 0.01 300);
+
+  --color-info: oklch(70% 0.18 240);
+  --color-info-content: oklch(98% 0.01 240);
+
+  --color-success: oklch(70% 0.17 160);
+  --color-success-content: oklch(98% 0.01 160);
+
+  --color-warning: oklch(80% 0.18 85);
+  --color-warning-content: oklch(25% 0.04 85);
+
+  --color-error: oklch(65% 0.22 25);
+  --color-error-content: oklch(98% 0.01 25);
+
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+/* =====================================================
+   LIGHT RED
+===================================================== */
+
+@plugin "daisyui/theme" {
+  name: "light-red";
+  default: false;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: oklch(100% 0 0);
+  --color-base-200: oklch(97% 0.015 25);
+  --color-base-300: oklch(92% 0.03 25);
+  --color-base-content: oklch(25% 0.04 25);
+
+  --color-primary: oklch(60% 0.22 25);
+  --color-primary-content: oklch(98% 0.01 25);
+
+  --color-secondary: oklch(65% 0.18 350);
+  --color-secondary-content: oklch(98% 0.01 350);
+
+  --color-accent: oklch(65% 0.18 10);
+  --color-accent-content: oklch(98% 0.01 10);
+
+  --color-neutral: oklch(30% 0.04 25);
+  --color-neutral-content: oklch(98% 0.01 25);
+
+  --color-info: oklch(70% 0.18 240);
+  --color-info-content: oklch(98% 0.01 240);
+
+  --color-success: oklch(70% 0.17 160);
+  --color-success-content: oklch(98% 0.01 160);
+
+  --color-warning: oklch(80% 0.18 85);
+  --color-warning-content: oklch(25% 0.04 85);
+
+  --color-error: oklch(65% 0.22 25);
+  --color-error-content: oklch(98% 0.01 25);
+
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+/* =====================================================
+   LIGHT ORANGE
+===================================================== */
+
+@plugin "daisyui/theme" {
+  name: "light-orange";
+  default: false;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: oklch(100% 0 0);
+  --color-base-200: oklch(97% 0.02 70);
+  --color-base-300: oklch(92% 0.04 70);
+  --color-base-content: oklch(25% 0.04 60);
+
+  --color-primary: oklch(65% 0.2 55);
+  --color-primary-content: oklch(98% 0.01 55);
+
+  --color-secondary: oklch(70% 0.18 35);
+  --color-secondary-content: oklch(98% 0.01 35);
+
+  --color-accent: oklch(70% 0.18 80);
+  --color-accent-content: oklch(25% 0.04 80);
+
+  --color-neutral: oklch(30% 0.04 60);
+  --color-neutral-content: oklch(98% 0.01 60);
+
+  --color-info: oklch(70% 0.18 240);
+  --color-info-content: oklch(98% 0.01 240);
+
+  --color-success: oklch(70% 0.17 160);
+  --color-success-content: oklch(98% 0.01 160);
+
+  --color-warning: oklch(80% 0.18 85);
+  --color-warning-content: oklch(25% 0.04 85);
+
+  --color-error: oklch(65% 0.22 25);
+  --color-error-content: oklch(98% 0.01 25);
+
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+/* =====================================================
+   DARK DEFAULT
+===================================================== */
+
+@plugin "daisyui/theme" {
+  name: "dark-default";
+  default: false;
+  prefersdark: true;
+  color-scheme: dark;
+
+  --color-base-100: oklch(20% 0 0);
+  --color-base-200: oklch(17% 0 0);
+  --color-base-300: oklch(25% 0 0);
+  --color-base-content: oklch(95% 0 0);
+
+  --color-primary: oklch(70% 0 0);
+  --color-primary-content: oklch(15% 0 0);
+
+  --color-secondary: oklch(60% 0 0);
+  --color-secondary-content: oklch(98% 0 0);
+
+  --color-accent: oklch(65% 0 0);
+  --color-accent-content: oklch(98% 0 0);
+
+  --color-neutral: oklch(30% 0 0);
+  --color-neutral-content: oklch(98% 0 0);
+
+  --color-info: oklch(70% 0.15 240);
+  --color-info-content: oklch(98% 0.01 240);
+
+  --color-success: oklch(70% 0.17 160);
+  --color-success-content: oklch(98% 0.01 160);
+
+  --color-warning: oklch(80% 0.18 85);
+  --color-warning-content: oklch(25% 0.04 85);
+
+  --color-error: oklch(65% 0.22 25);
+  --color-error-content: oklch(98% 0.01 25);
+
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+/* =====================================================
+   DARK BLUE
+===================================================== */
+
+@plugin "daisyui/theme" {
+  name: "dark-blue";
+  default: false;
+  prefersdark: true;
+  color-scheme: dark;
+
+  --color-base-100: oklch(20% 0.03 240);
+  --color-base-200: oklch(17% 0.03 240);
+  --color-base-300: oklch(25% 0.04 240);
+  --color-base-content: oklch(95% 0.02 240);
+
+  --color-primary: oklch(65% 0.22 255);
+  --color-primary-content: oklch(98% 0.01 255);
+
+  --color-secondary: oklch(70% 0.18 285);
+  --color-secondary-content: oklch(98% 0.01 285);
+
+  --color-accent: oklch(65% 0.18 210);
+  --color-accent-content: oklch(98% 0.01 210);
+
+  --color-neutral: oklch(30% 0.04 240);
+  --color-neutral-content: oklch(98% 0.01 240);
+
+  --color-info: oklch(70% 0.18 240);
+  --color-info-content: oklch(98% 0.01 240);
+
+  --color-success: oklch(70% 0.17 160);
+  --color-success-content: oklch(98% 0.01 160);
+
+  --color-warning: oklch(80% 0.18 85);
+  --color-warning-content: oklch(25% 0.04 85);
+
+  --color-error: oklch(65% 0.22 25);
+  --color-error-content: oklch(98% 0.01 25);
+
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+/* =====================================================
+   DARK PURPLE
+===================================================== */
+
+@plugin "daisyui/theme" {
+  name: "dark-purple";
+  default: false;
+  prefersdark: true;
+  color-scheme: dark;
+
+  --color-base-100: oklch(20% 0.03 300);
+  --color-base-200: oklch(17% 0.03 300);
+  --color-base-300: oklch(25% 0.04 300);
+  --color-base-content: oklch(95% 0.02 300);
+
+  --color-primary: oklch(65% 0.22 295);
+  --color-primary-content: oklch(98% 0.01 295);
+
+  --color-secondary: oklch(70% 0.18 325);
+  --color-secondary-content: oklch(98% 0.01 325);
+
+  --color-accent: oklch(65% 0.18 270);
+  --color-accent-content: oklch(98% 0.01 270);
+
+  --color-neutral: oklch(30% 0.04 300);
+  --color-neutral-content: oklch(98% 0.01 300);
+
+  --color-info: oklch(70% 0.18 240);
+  --color-info-content: oklch(98% 0.01 240);
+
+  --color-success: oklch(70% 0.17 160);
+  --color-success-content: oklch(98% 0.01 160);
+
+  --color-warning: oklch(80% 0.18 85);
+  --color-warning-content: oklch(25% 0.04 85);
+
+  --color-error: oklch(65% 0.22 25);
+  --color-error-content: oklch(98% 0.01 25);
+
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+/* =====================================================
+   DARK RED
+===================================================== */
+
+@plugin "daisyui/theme" {
+  name: "dark-red";
+  default: false;
+  prefersdark: true;
+  color-scheme: dark;
+
+  --color-base-100: oklch(20% 0.03 25);
+  --color-base-200: oklch(17% 0.03 25);
+  --color-base-300: oklch(25% 0.04 25);
+  --color-base-content: oklch(95% 0.02 25);
+
+  --color-primary: oklch(65% 0.22 25);
+  --color-primary-content: oklch(98% 0.01 25);
+
+  --color-secondary: oklch(70% 0.18 350);
+  --color-secondary-content: oklch(98% 0.01 350);
+
+  --color-accent: oklch(65% 0.18 10);
+  --color-accent-content: oklch(98% 0.01 10);
+
+  --color-neutral: oklch(30% 0.04 25);
+  --color-neutral-content: oklch(98% 0.01 25);
+
+  --color-info: oklch(70% 0.18 240);
+  --color-info-content: oklch(98% 0.01 240);
+
+  --color-success: oklch(70% 0.17 160);
+  --color-success-content: oklch(98% 0.01 160);
+
+  --color-warning: oklch(80% 0.18 85);
+  --color-warning-content: oklch(25% 0.04 85);
+
+  --color-error: oklch(65% 0.22 25);
+  --color-error-content: oklch(98% 0.01 25);
+
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+/* =====================================================
+   DARK ORANGE
+===================================================== */
+
+@plugin "daisyui/theme" {
+  name: "dark-orange";
+  default: false;
+  prefersdark: true;
+  color-scheme: dark;
+
+  --color-base-100: oklch(20% 0.03 60);
+  --color-base-200: oklch(17% 0.03 60);
+  --color-base-300: oklch(25% 0.04 60);
+  --color-base-content: oklch(95% 0.02 60);
+
+  --color-primary: oklch(68% 0.2 55);
+  --color-primary-content: oklch(98% 0.01 55);
+
+  --color-secondary: oklch(70% 0.18 35);
+  --color-secondary-content: oklch(98% 0.01 35);
+
+  --color-accent: oklch(70% 0.18 80);
+  --color-accent-content: oklch(25% 0.04 80);
+
+  --color-neutral: oklch(30% 0.04 60);
+  --color-neutral-content: oklch(98% 0.01 60);
+
+  --color-info: oklch(70% 0.18 240);
+  --color-info-content: oklch(98% 0.01 240);
+
+  --color-success: oklch(70% 0.17 160);
+  --color-success-content: oklch(98% 0.01 160);
+
+  --color-warning: oklch(80% 0.18 85);
+  --color-warning-content: oklch(25% 0.04 85);
+
+  --color-error: oklch(65% 0.22 25);
+  --color-error-content: oklch(98% 0.01 25);
+
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+/* =====================================================
+   APPLICATION VARIABLES
+===================================================== */
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* =====================================================
+   LIGHT THEMES
+===================================================== */
+
+html[data-theme="light-default"],
+html[data-theme="light-blue"],
+html[data-theme="light-purple"],
+html[data-theme="light-red"],
+html[data-theme="light-orange"] {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* =====================================================
+   DARK THEMES
+===================================================== */
+
+html[data-theme="dark-default"],
+html[data-theme="dark-blue"],
+html[data-theme="dark-purple"],
+html[data-theme="dark-red"],
+html[data-theme="dark-orange"] {
+  --background: #111111;
+  --foreground: #f5f5f5;
+}
+
+/* =====================================================
+   TAILWIND THEME
+===================================================== */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}

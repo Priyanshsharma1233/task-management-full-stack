@@ -8,12 +8,14 @@ async function bootstrap() {
   app.enableCors({
     origin: [
       'http://localhost:3000',
-      'https://task-management-system-d389zs91a-my-project-3a91.vercel.app',
+      'https://task-management-system-tau-three.vercel.app',
     ],
     methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
   });
 
   await app.listen(process.env.PORT ?? 3000);
 }
+
 bootstrap();

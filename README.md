@@ -1,93 +1,65 @@
 # Task Management System
 
-A full-stack task management application built as a **Full Stack Developer technical assessment**. The application provides authenticated users with a centralized interface to create, manage, filter, and organize tasks through a modern responsive UI.
+A full-stack task management application built as a Full Stack Developer technical assessment.
 
-## 🚀 Features
+## 🚀 Live Demo
 
-### Authentication & Authorization
+**Frontend:**  
+https://task-management-system-tau-three.vercel.app/
 
-* User registration and login
-* JWT-based authentication
-* Protected API routes
-* Authenticated user profile
-* Current-user (`/auth/me`) endpoint
-* Password hashing using bcrypt
+**Backend:**  
+https://task-management-backend-cmdr.onrender.com/
 
-### Task Management
+**GitHub:**  
+https://github.com/Priyanshsharma1233/task-management-full-stack
 
-* Create tasks
-* Edit tasks
-* Delete tasks
-* View task details
-* Task status management
+---
 
-  * TODO
-  * IN_PROGRESS
-  * DONE
-* Task priority management
+## ✨ Features
 
-  * LOW
-  * MEDIUM
-  * HIGH
-* Due-date support
-* Task descriptions
-* User-specific task data
-
-### Task Views & Controls
-
-* List view
-* Board/Kanban-style view
-* Task filtering
-* Status filtering
-* Priority filtering
-* Configurable visible task fields
-* Responsive task management interface
-
-### UI
-
-* Figma-inspired design
-* Responsive layout
-* Sidebar navigation
-* Profile section
-* Project section
-* Light and dark theme support
-* Accent color customization
-* Modal-based task creation/editing
+- User registration and login
+- JWT authentication
+- Protected API routes
+- Create, edit and delete tasks
+- Task status and priority management
+- Task filtering
+- List and Kanban board views
+- Project management
+- User-specific tasks and projects
+- Profile section
+- Light/Dark theme
+- Accent color customization
+- Responsive UI
+- Figma-inspired design
 
 ---
 
 ## 🛠️ Tech Stack
 
 ### Frontend
-
-* **Next.js**
-* **React**
-* **TypeScript**
-* **Tailwind CSS**
-* Next.js App Router
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
 
 ### Backend
+- NestJS
+- TypeScript
+- Prisma ORM
+- SQLite
+- JWT
+- bcrypt
 
-* **NestJS**
-* **TypeScript**
-* **Prisma ORM**
-* **SQLite**
-* **JWT**
-* **bcrypt**
-
-### Development Tools
-
-* Git & GitHub
-* ESLint
-* Prisma CLI
-* npm/yarn
+### Deployment
+- Vercel — Frontend
+- Render — Backend
 
 ---
 
 ## 📁 Project Structure
 
 ```text
-Task-Management/
+task-management-full-stack/
 │
 ├── frontend/
 │   ├── src/
@@ -95,480 +67,15 @@ Task-Management/
 │   │   │   ├── login/
 │   │   │   ├── register/
 │   │   │   ├── tasks/
-│   │   │   ├── projects/
-│   │   │   └── ...
-│   │   │
-│   │   ├── components/
-│   │   │   ├── Sidebar/
-│   │   │   ├── TaskHeader/
-│   │   │   ├── TaskList/
-│   │   │   ├── TaskBoard/
-│   │   │   ├── CreateTaskModal/
-│   │   │   └── EditTaskModal/
-│   │   │
-│   │   └── ...
+│   │   │   └── projects/
+│   │   └── components/
 │   │
-│   ├── package.json
-│   └── ...
-│
 ├── backend/
 │   ├── src/
 │   │   ├── auth/
 │   │   ├── task/
-│   │   ├── prisma/
-│   │   └── ...
-│   │
-│   ├── prisma/
-│   │   └── schema.prisma
-│   │
-│   ├── generated/
-│   ├── package.json
-│   └── ...
+│   │   ├── project/
+│   │   └── prisma/
+│   └── prisma/
 │
 └── README.md
-```
-
----
-
-# ⚙️ Prerequisites
-
-Make sure the following are installed:
-
-* Node.js
-* npm or Yarn
-* Git
-
-Recommended environment:
-
-```text
-Node.js 22+
-```
-
----
-
-# 🔧 Installation
-
-## 1. Clone the repository
-
-```bash
-git clone <https://github.com/Priyanshsharma1233/task-management-full-stack.git>
-cd Task-Management
-```
-
----
-
-# 🖥️ Frontend Setup
-
-Navigate to the frontend directory:
-
-```bash
-cd frontend
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-or:
-
-```bash
-yarn install
-```
-
-Create a `.env.local` file:
-
-```env
-NEXT_PUBLIC_API_URL=http://localhost:3001
-```
-
-Start the development server:
-
-```bash
-npm run dev
-```
-
-The frontend will be available at:
-
-```text
-http://localhost:3000
-```
-
----
-
-# ⚙️ Backend Setup
-
-Open another terminal and navigate to:
-
-```bash
-cd backend
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-or:
-
-```bash
-yarn install
-```
-
-Configure the backend environment variables according to the project configuration.
-
-Generate the Prisma client:
-
-```bash
-npx prisma generate
-```
-
-If the database needs to be initialized:
-
-```bash
-npx prisma migrate dev
-```
-
-Start the backend:
-
-```bash
-npm run start:dev
-```
-
-The backend API will run on the configured NestJS port.
-
----
-
-# 🔐 Authentication Flow
-
-The application uses **JWT-based authentication**.
-
-### Registration
-
-```text
-Frontend
-   ↓
-POST /auth/register
-   ↓
-NestJS AuthController
-   ↓
-AuthService
-   ↓
-Password hashed with bcrypt
-   ↓
-User stored in SQLite
-```
-
-### Login
-
-```text
-Frontend
-   ↓
-POST /auth/login
-   ↓
-Credentials validated
-   ↓
-JWT generated
-   ↓
-Token returned to client
-```
-
-Protected task endpoints require a valid JWT.
-
----
-
-# 🔌 API Endpoints
-
-## Authentication
-
-| Method | Endpoint         | Description                    | Protected |
-| ------ | ---------------- | ------------------------------ | --------- |
-| POST   | `/auth/register` | Register a new user            | No        |
-| POST   | `/auth/login`    | Authenticate user              | No        |
-| GET    | `/auth/me`       | Get current authenticated user | Yes       |
-
-## Tasks
-
-| Method | Endpoint     | Description         | Protected |
-| ------ | ------------ | ------------------- | --------- |
-| POST   | `/tasks`     | Create a task       | Yes       |
-| GET    | `/tasks`     | Get user's tasks    | Yes       |
-| GET    | `/tasks/:id` | Get a specific task | Yes       |
-| PATCH  | `/tasks/:id` | Update a task       | Yes       |
-| DELETE | `/tasks/:id` | Delete a task       | Yes       |
-
----
-
-# 🗃️ Database
-
-The project uses **SQLite** with **Prisma ORM**.
-
-Main entities:
-
-```text
-User
- │
- └── Task
-       ├── title
-       ├── description
-       ├── status
-       ├── priority
-       ├── dueDate
-       ├── createdAt
-       └── updatedAt
-```
-
-Each task belongs to an authenticated user.
-
-### Task Status
-
-```text
-TODO
-IN_PROGRESS
-DONE
-```
-
-### Task Priority
-
-```text
-LOW
-MEDIUM
-HIGH
-```
-
----
-
-# 🧩 Architecture
-
-The project follows a separated frontend/backend architecture.
-
-```text
-┌──────────────────────────┐
-│        Next.js           │
-│        Frontend          │
-└────────────┬─────────────┘
-             │
-             │ REST API
-             │ JWT
-             ▼
-┌──────────────────────────┐
-│         NestJS           │
-│         Backend          │
-├──────────────────────────┤
-│ Auth Module              │
-│ Task Module              │
-│ JWT Guard                │
-│ Services                 │
-│ Controllers              │
-└────────────┬─────────────┘
-             │
-             │ Prisma ORM
-             ▼
-┌──────────────────────────┐
-│         SQLite           │
-│         Database         │
-└──────────────────────────┘
-```
-
----
-
-# 🎨 UI Design
-
-The frontend was developed based on the provided Figma assessment design.
-
-The implementation focuses on:
-
-* Visual consistency
-* Responsive layouts
-* Reusable components
-* Sidebar navigation
-* Task list and board interfaces
-* Profile interaction
-* Theme customization
-* Modal interactions
-
-The goal was to reproduce the **core UX and visual structure of the Figma design** while maintaining a clean component architecture.
-
----
-
-# 🧱 Component Architecture
-
-The frontend is divided into reusable components rather than keeping the entire application inside individual pages.
-
-Examples:
-
-```text
-Sidebar
-TaskHeader
-TaskList
-TaskBoard
-CreateTaskModal
-EditTaskModal
-Profile
-ThemeSettings
-```
-
-This makes the application easier to maintain and extend.
-
----
-
-# 🔒 Security Considerations
-
-The backend implements several security-related practices:
-
-* JWT authentication
-* Protected task routes
-* Password hashing with bcrypt
-* User-specific task access
-* DTO validation
-* Authentication guards
-* No plain-text password storage
-
----
-
-# 📱 Responsive Design
-
-The application is designed to work across different screen sizes:
-
-* Desktop
-* Laptop
-* Tablet
-* Mobile
-
-Tailwind CSS utility classes are used to implement responsive layouts.
-
----
-
-# 🧪 Testing the Application
-
-After starting both servers:
-
-### 1. Open the frontend
-
-```text
-http://localhost:3000
-```
-
-### 2. Create an account
-
-Register using an email and password.
-
-### 3. Login
-
-Authenticate with the newly created account.
-
-### 4. Create a task
-
-Add:
-
-* Title
-* Description
-* Status
-* Priority
-* Due date
-
-### 5. Manage tasks
-
-Test:
-
-* Editing
-* Deleting
-* Filtering
-* Status changes
-* Priority changes
-* List/board views
-
-### 6. Verify authentication
-
-Log out and verify that protected task APIs cannot be accessed without authentication.
-
----
-
-# 🚧 Future Improvements
-
-Potential production-level improvements include:
-
-* PostgreSQL for production database
-* Refresh-token based authentication
-* HTTP-only secure cookies
-* Role-based access control
-* Automated unit and integration tests
-* API documentation with Swagger
-* Pagination
-* Server-side filtering and sorting
-* Task search
-* Project-task relationships
-* Task labels
-* Team/member assignment
-* Notifications
-* File attachments
-* Docker deployment
-* CI/CD pipeline
-* Production monitoring and logging
-
----
-
-# 📈 Production Readiness Roadmap
-
-```text
-Current
-   ↓
-Authentication
-   ↓
-Task CRUD
-   ↓
-Filtering & Views
-   ↓
-Responsive UI
-   ↓
-Validation & Error Handling
-   ↓
-Automated Testing
-   ↓
-PostgreSQL
-   ↓
-Docker
-   ↓
-CI/CD
-   ↓
-Cloud Deployment
-```
-
----
-
-# 💡 Key Learning Outcomes
-
-This project demonstrates practical experience with:
-
-* Full-stack application architecture
-* React and Next.js
-* TypeScript
-* REST API development
-* NestJS architecture
-* JWT authentication
-* Prisma ORM
-* Relational data modeling
-* SQLite
-* CRUD operations
-* Protected API routes
-* Component-based UI development
-* Responsive design
-* Git/GitHub workflow
-
----
-
-# 👨‍💻 Author
-
-**Priyansh Sharma**
-
-Full Stack Developer — Fresher
-
-Built as a Full Stack Developer technical assessment project.
-
----
-
-# 📄 License
-
-This project was developed for educational, portfolio, and technical assessment purposes.
